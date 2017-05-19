@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=0.9, minimum-scale=0.9, maximum-scale=0.9, user-scalable=no" />
+    <!--<meta name="viewport" content="width=device-width,initial-scale=0.9, minimum-scale=0.9, maximum-scale=0.9, user-scalable=no" />-->
     <title>我爱你</title>
     <link type="text/css" rel="stylesheet" href="./renxi/default.css">
     <script type="text/javascript" src="./renxi/jquery.min.js"></script>
@@ -79,6 +79,8 @@
                 if (width < height) {
                     console.log(width + " " + height);
                     $body = $('body');
+                    $body.width(height);
+                    $body.height(width);
                     $body.css('transform', 'rotate(90deg)');
                     //document.documentElement.requestFullScreen();
                 }
