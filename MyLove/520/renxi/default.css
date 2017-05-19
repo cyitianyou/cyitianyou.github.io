@@ -18,11 +18,11 @@ a {
 }
 
 #wrap {
-    position: absolute;
     margin: 0 auto;
     width: 1100px;
     height: 680px;
     margin-top: 10px;
+    position: relative;
 }
 
 #text {
