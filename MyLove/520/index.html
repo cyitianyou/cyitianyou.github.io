@@ -74,6 +74,14 @@
                     $('.pic2').fadeIn(3000);
                     $('.pic3').fadeIn();
                 })
+                var width = document.documentElement.clientWidth;
+                var height = document.documentElement.clientHeight;
+                if (width < height) {
+                    console.log(width + " " + height);
+                    $body = $('body');
+                    $body.css('transform', 'rotate(90deg)');
+                    //document.documentElement.requestFullScreen();
+                }
             })
             var canvas = $('#canvas');
             if (!canvas[0].getContext) {
@@ -128,15 +136,15 @@
                     x, y;
                 x = e.pageX - offset.left;
                 y = e.pageY - offset.top;
-                if (seed.hover(x, y)) {
-                    hold = 0;
-                    canvas.unbind("click");
-                    canvas.unbind("mousemove");
-                    canvas.removeClass('hand');
-                    var bb = setTimeout(function() {
-                        $('.showBox').fadeIn();
-                    }, 38000);
-                }
+                //if (seed.hover(x, y)) {
+                hold = 0;
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+                var bb = setTimeout(function() {
+                    $('.showBox').fadeIn();
+                }, 38000);
+                //}
             }).mousemove(function(e) {
                 var offset = canvas.offset(),
                     x, y;
