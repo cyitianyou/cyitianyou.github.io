@@ -81,6 +81,8 @@
                     $body = $('body');
                     $body.width(height);
                     $body.height(width);
+                    $('#wrap').css('top', (width - $('#canvas').height()))
+                    $('#wrap').css('left', (height - $('#canvas').width()))
                     $body.css('transform', 'rotate(90deg)');
                     //document.documentElement.requestFullScreen();
                 }
